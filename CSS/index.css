@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Epilogue:wght@400;500;700&family=Kumbh+Sans:wght@100;400&family=Poppins:ital,wght@0,100;0,200;0,300;0,600;1,300&family=Rubik:wght@300&family=Space+Mono:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'poppins', sans-serif;
+}
+
+html {
+   /*  font-size: 62.5%; */
+    font-size: clamp(60%, 15rem, 1vw);
+    overflow-x: hidden;
+}
+
+body {
+    background: rgb(80, 80, 138);
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2vw 6vw;
+    background: greenyellow;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.9rem;
+    color: white;
+    font-weight: 600;
+    cursor: default;
+    margin-right: auto;
+}
+
+.navbar .link {
+    position: relative;
+    font-size: 1.7rem;
+    color: white;
+    font-weight: 500;
+    margin-right: 3.5rem;
+}
+
+.navbar .link.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 1px;
+    height: 0.2rem;
+    background: blue;
+}
+
+#icon_palette {
+    font-size: 2.4rem;
+    color: white;
+}
+
+.section_home {
+    min-height: 100vh;
+    padding: 10rem 7% 2rem;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home .home_content {
+    flex: 1;
+    max-width: 44rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+.home_content .home_titulo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 0.3;
+}
+
+.home_content .home_nombre {
+    font-size: 3.6rem;
+    font-weight: 700;
+}
+
+.home_content .home_info {
+    font-size: 1.5rem;
+}
+
+.home_content .social_media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: 0.2rem solid green;
+    border-radius: 50%;
+    box-shadow: 0 0.2rem 0.5rem rebeccapurple;
+    font-size: 2rem;
+    color: aqua;
+    margin: 2.5rem 1.5rem 3rem 0;
+    transition: 0.5s ease;
+}
+
+.home_content .social_media a:hover {
+    background: red;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 1rem;
+    background: yellow;
+    border-radius: 0.6rem;
+    box-shadow: 0 0.2rem 0.5rem red;
+    font-size: 1.4rem;
+    color: white;
+    border: 0.2rem solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background: transparent;
+    color: blueviolet;
+    border: #ee82ee;
+}
+.home .profesion_container{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 48vw;
+    height: 48vw;
+    /* background:black; */
+    overflow: hidden;
+    pointer-events: none;
+}
+.home .profesion_container .profesion_box{
+    position: absolute;
+    top:0%;
+    right: 0;
+    width: 48vw;
+    height: 48vw;
+    /* background:green; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home .profesion_box .profesion{
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #ee82ee;
+    transform: rotate(calc(360deg / 4 * var(--i)));
+    transform-origin: 23vw;
+    background:  rgb(80, 80, 138);
+    padding: 13px 0;
+}
+.home .profesion_box .profesion:nth-child(1) i {
+    margin-right: 15px;
+}
+.home .profesion_box .profesion:nth-child(2),
+.home .profesion_box .profesion:nth-child(3){
+    font-size: 3.8rem;
+}
+
+.home .profesion i{
+    font-size: 3.3rem;
+}
+.home .profesion h3{
+    font-size: 1.6rem;
+    line-height: 1;
+    font-weight: 600;
+}
+.home .profesion_box .circle{
+    width: 34vw;
+    height: 34vw;
+    border: 3px solid yellow;
+    border-radius: 50%;
+}
+.home .profesion_container .overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 26vw solid rgb(31, 29, 49);
+    border-right: 26vw solid  rgb(31, 29, 49);
+    border-bottom: 26vw solid rgb(31, 29, 49);
+    border-left: 26vw solid transparent
+}
+.home-img img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .home .home_content {
+        margin-right: 0;
+    }
+
+    .navbar {
+        flex: 1;
+        margin-top: 1rem;
+        order: -1;
+    }
+
+    .navbar .link {
+        margin-right: 1rem;
+    }
+
+    #icon_palette {
+        margin-left: auto;
+    }
+}
