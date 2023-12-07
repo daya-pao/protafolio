@@ -22,14 +22,74 @@ body {
     margin: 0;
     padding: 0;
 }
+/* paleta de colores */
+.peleta__colores{
+    border: 1px solid red;
+    max-height: 11rem;
+}
+.tema_titulo{
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 2rem 1.5rem 0;
+}
+.tema_lista{
+    border: 1px solid gold;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    text-align: center;
+    padding: 1rem 1.5rem 2rem;
+}
+.tema_item{
+    display: inline-block;
+    position: relative;
+    border-radius: 0.5em;
+    transform: scale(1);
+    transition: transform .2s cubic-bezier(.4, 0, .2, 1);
+}
+.tema_btn{
+    display: block;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 1px solid black;
+    width: 100%;
+    text-align: center;
+    background-color: red;
+}
+.tema_nombre{
+    display: block;
+    color: white;
+}
+.tema_paleta{
+    display: block;
+    padding: 0.125em 0;
+}
+.tema_bg{
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    white-space: nowrap;
+    text-indent: 100%;
+    text-align: left;
+    overflow: hidden;
+    vertical-align: bottom;
+    box-shadow: 0 0 0 2px #fff;
+}
 
+/* custom */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 2vw 6vw;
-    background: greenyellow;
+   /*  background: greenyellow; */
     display: flex;
     align-items: center;
     z-index: 100;
@@ -202,10 +262,10 @@ body {
     right: 0;
     width: 0;
     height: 0;
-    border-top: 26vw solid rgb(31, 29, 49);
-    border-right: 26vw solid  rgb(31, 29, 49);
-    border-bottom: 26vw solid rgb(31, 29, 49);
-    border-left: 26vw solid transparent
+    border-top: 25vw solid rgb(31, 29, 49) ;
+    border-right: 22vw solid  rgb(31, 29, 49);
+    border-bottom: 23vw solid rgb(31, 29, 49);
+    border-left: 25vw solid transparent;
 }
 .home-img img{
     position: absolute;
@@ -214,9 +274,6 @@ body {
     width: 100%;
     pointer-events: none;
 }
-
-
-
 @media screen and (max-width: 768px) {
     .home .home_content {
         margin-right: 0;
